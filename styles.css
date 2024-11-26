@@ -1,0 +1,388 @@
+/* ========= Styles généraux ========= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+/* ========= Menu Navigation ========= */
+.navbar {
+    background-color: #34495e;
+    display: flex;
+    justify-content: space-between; /* Séparer les deux groupes de liens */
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #1abc9c;
+    color: #ffffff;
+}
+
+.left-links {
+    justify-content: flex-start;
+}
+
+.right-links {
+    justify-content: flex-end;
+}
+
+/* Responsive design pour le menu */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .right-links {
+        margin-top: 10px;
+    }
+}
+
+/* ========= Formulaire de Connexion / Inscription ========= */
+.container, .news {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto; /* Centrer verticalement */
+}
+
+.form-title {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.login-form, .signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+.form-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #1abc9c;
+    outline: none;
+}
+
+.form-button {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #1abc9c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #16a085;
+}
+
+.error {
+    color: #e74c3c;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* ========= Styles pour la page d'inscription ========= */
+.signup-form {
+    margin-top: 30px;
+}
+
+.signup-form .form-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.signup-form .form-group {
+    margin-bottom: 15px;
+}
+
+.signup-form button {
+    width: 100%;
+}
+
+.signup-form h2 {
+    color: #e74c3c;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container, .news {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .signup-form {
+        padding: 15px;
+    }
+
+    .signup-form .form-group {
+        margin-bottom: 12px;
+    }
+}
+
+
+.news, .article {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* ========= Titre de la page ========= */
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* ========= Card des articles ========= */
+.article-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.article-title {
+    font-size: 24px;
+    color: #34495e;
+    margin: 0 0 10px 0;
+}
+
+.article-title a {
+    text-decoration: none;
+    color: #34495e;
+    font-weight: bold;
+}
+
+.article-title a:hover {
+    color: #1abc9c;
+}
+
+.article-content {
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #1abc9c;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    background-color: #16a085;
+}
+
+/* ========= Gestion de l'absence d'articles ========= */
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #e74c3c;
+}
+
+/* ========= Article ========= */
+.article .article-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.article .article-content h1 {
+    font-size: 28px;
+    color: #34495e;
+}
+
+.article .article-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #7f8c8d;
+}
+
+/* ========= Section commentaires ========= */
+.comments-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h2 {
+    font-size: 24px;
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+.comments-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comment-item {
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.comment-author {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1abc9c;
+}
+
+.comment-body {
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+.comment-date {
+    font-size: 14px;
+    color: #95a5a6;
+    margin-top: 5px;
+}
+
+/* ========= Formulaire de commentaire ========= */
+.comment-form textarea {
+    width: 100%;
+    margin: 10px;
+    font-size: 16px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.comment-form .submit-btn {
+    padding: 10px 15px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.comment-form .submit-btn:hover {
+    background-color: #16a085;
+}
+
+/* ========= Lien de connexion ========= */
+.login-link {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.index {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ========= Titre de la page ========= */
+.index-title {
+    font-size: 40px;
+    color: #1abc9c;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* ========= Texte d'introduction ========= */
+.index-text {
+    font-size: 20px;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-top: 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    gap: 20px; /* Espace entre les colonnes et les lignes */
+}
